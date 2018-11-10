@@ -30,7 +30,7 @@ bot1.on('message', message => {
     if(message.content.startsWith('manage daily')) {
             setInterval(()=>{
             message.channel.send(`daily`)
-        },1800);
+        },86400000);
         }})
 
 
@@ -40,7 +40,7 @@ bot1.on('message', message => {
     if(message.content.startsWith('manage rep')) {
             setInterval(()=>{
             message.channel.send(`do rep`)
-        },1800);
+        },86400000);
         }})
 
 

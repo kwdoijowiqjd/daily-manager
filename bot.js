@@ -27,41 +27,22 @@ bot1.on('ready', () => {
 });
 
 bot1.on('message', message => {
-    if(message.content.startsWith('start manage')) {
+    if(message.content.startsWith('manage daily')) {
             setInterval(()=>{
-            message.channel.send(`!spam`)
-        },1800000);
+            message.channel.send(`daily`)
+        },1800);
+        }})
+
+
+
+
+bot1.on('message', message => {
+    if(message.content.startsWith('manage rep')) {
+            setInterval(()=>{
+            message.channel.send(`do rep`)
+        },1800);
         }})
 
 
         bot1.login(process.env.FB1);
-////////////////////////////////////////////
-
-        const bot2 = new Discord.Client();
-
-        bot2.on('message', message => {
-            if(message.content.startsWith('start manage')) {
-                    setInterval(()=>{
-                    message.channel.send(`!spam`)
-                },1800000);
-                }})
-        
-        
-                bot2.login(process.env.FB2);
-
-////////////////////////////////////////////////////
-
-                const bot3 = new Discord.Client();
-
-
-                bot3.on('message', message => {
-                    if(message.content.startsWith('start manage')) {
-                            setInterval(()=>{
-                            message.channel.send(`!spam`)
-                        },1800000);
-                        }})
-                
-                
-                        bot3.login(process.env.FB3);
-//////////////////////////////////////////////////////
-
+    
